@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: dataQualification
+
+  application:
+    name: QUALIFICATION-SERVICE
+
+
+  config:
+    import: optional:configserver:http://localhost8085

@@ -1,0 +1,16 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: AUTH-SERVICE
+  config:
+    import: optional:configserver:http://localhost:8085
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dbauthusers
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: secret
